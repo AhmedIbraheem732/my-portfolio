@@ -3,265 +3,401 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Software Engineer | .NET & Health Informatics Specialist" />
-  <meta property="og:title" content="Portfolio | مهندس برمجيات" />
-  <meta property="og:description" content="تطوير الأنظمة المؤسسية بـ .NET، هندسة البرمجيات، وحلول الأتمتة" />
-  <title>مهندس برمجيات | .NET & Systems Developer</title>
-
-  <!-- الخطوط الرسمية والأيقونات -->
+  <meta name="description" content="مهندس برمجيات دوت نت ومتخصص معلوماتية صحية" />
+  <title>مهندس برمجيات | .NET & Solutions Architect</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- الربط بملف الستايل -->
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
 
-  <!-- شريط التنقل -->
+  <!-- Navigation -->
   <header class="header">
-    <div class="nav-container">
-      <a href="#home" class="logo">Eng.Portfolio</a>
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#about">عنّي</a></li>
-          <li><a href="#education">المسار الأكاديمي</a></li>
-          <li><a href="#skills">التقنيات</a></li>
-          <li><a href="#projects">المشاريع</a></li>
-          <li><a href="#contact">تواصل معي</a></li>
-        </ul>
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <span class="brand-code">&lt;/&gt;</span>
+        <span class="brand-name">Eng.Portfolio</span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#about" class="nav-link">عنّي</a>
+        <a href="#education" class="nav-link">المسار الأكاديمي</a>
+        <a href="#skills" class="nav-link">المهارات</a>
+        <a href="#projects" class="nav-link">المشاريع الهندسية</a>
+        <a href="#contact" class="nav-link">تواصل</a>
       </nav>
-      <div class="nav-actions">
-        <button id="theme-toggle" aria-label="تبديل المظهر"><i class="fas fa-moon"></i></button>
-        <button id="menu-toggle" class="mobile-btn" aria-label="فتح القائمة"><i class="fas fa-bars"></i></button>
+
+      <div class="nav-ctrls">
+        <button id="theme-btn" class="icon-btn" aria-label="تبديل المظهر"><i class="fas fa-moon"></i></button>
+        <button id="menu-btn" class="icon-btn mobile-only" aria-label="القائمة"><i class="fas fa-bars"></i></button>
       </div>
     </div>
   </header>
 
-  <!-- الواجهة الترحيبية -->
+  <!-- Hero Section -->
   <section id="home" class="hero section">
     <div class="container">
-      <div class="hero-status">
-        <span class="status-dot"></span> باحث ماجستير هندسة برمجيات | مطور .NET
+      <div class="status-pill">
+        <span class="live-dot"></span>
+        <span>متاح للعمل على أنظمة .NET وحلول الأتمتة السحابية</span>
       </div>
-      <h1 class="hero-title">مهندس برمجيات متخصص في بناء <br>الأنظمة المؤسسية وحلول الأتمتة</h1>
-      <p class="hero-desc">
-        أجمع بين المعرفة العميقة في <strong>هندسة البرمجيات ونظم .NET</strong>، وتخصص <strong>المعلوماتية الصحية (Health Informatics)</strong>، مع خبرة عملية في تطوير تطبيقات الموبايل بـ Flutter وأتمتة بيئات العمل عبر Google Cloud Platform وApps Script.
+
+      <h1 class="hero-heading">
+        هندسة برمجيات متينة <br />
+        <span class="accent-text">وأنظمة مؤسسية عالية الاعتمادية</span>
+      </h1>
+
+      <p class="hero-summary">
+        باحث ماجستير في هندسة البرمجيات بجامعة القاهرة، وخريج مبادرات <strong>رواد وبناة مصر الرقمية</strong>. أمتلك تخصصاً نادراً يربط بين <strong>المعلوماتية الصحية (Health Informatics)</strong> وهندسة الـ <strong>.NET Backend</strong>، بالإضافة إلى بناء تطبيقات <strong>Flutter</strong> وأتمتة بيئات العمل عبر <strong>Google Cloud & Apps Script</strong>.
       </p>
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">استعراض المشاريع</a>
-        <a href="resume.pdf" download class="btn btn-outline"><i class="fas fa-download"></i> السيرة الذاتية (CV)</a>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary"><i class="fas fa-layer-group"></i> استعراض المشاريع</a>
+        <a href="resume.pdf" download class="btn btn-secondary"><i class="fas fa-file-arrow-down"></i> السيرة الذاتية (CV)</a>
+      </div>
+
+      <!-- Quick Metrics Bar (مؤشرات قوة الملف الشخصي) -->
+      <div class="metrics-grid">
+        <div class="metric-item">
+          <span class="metric-num">3+</span>
+          <span class="metric-label">مؤهلات أكاديمية ودبلومات تخصصية</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-num">.NET Core</span>
+          <span class="metric-label">Clean Architecture & EF Core</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-num">HealthTech</span>
+          <span class="metric-label">تخصص دقيق في المعلوماتية الصحية</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-num">Automation</span>
+          <span class="metric-label">أنظمة متكاملة عبر Apps Script & APIs</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- المسار الأكاديمي والشهادات -->
-  <section id="education" class="section bg-subtle">
+  <!-- Education & Credentials (تم تحويلها لـ Timeline منظم هندسياً) -->
+  <section id="education" class="section bg-card">
     <div class="container">
-      <div class="section-header">
-        <h2>المؤهلات الأكاديمية والمنح المتخصصة</h2>
-        <p>الجمع بين علوم الحاسوب الأساسية، هندسة البرمجيات، والتطبيقات القطاعية المتخصصة</p>
+      <div class="section-title-wrap">
+        <span class="section-tag">الخلفية الأكاديمية والمهنية</span>
+        <h2>المؤهلات والدبلومات والمنح الوطنية</h2>
       </div>
 
-      <div class="grid-2">
-        <!-- المسار الأكاديمي -->
-        <div class="card">
-          <h3 class="card-heading"><i class="fas fa-university text-muted"></i> التعليم الأكاديمي</h3>
-          <ul class="clean-list">
-            <li>
-              <div class="item-title">ماجستير هندسة البرمجيات</div>
-              <div class="item-sub">جامعة القاهرة - كلية الحاسبات والذكاء الاصطناعي (مستمر)</div>
-            </li>
-            <li>
-              <div class="item-title">بكالوريوس علوم الحاسوب (B.Sc. in Computer Science)</div>
-              <div class="item-sub">University of the People - الولايات المتحدة (مستمر)</div>
-            </li>
-            <li>
-              <div class="item-title">دبلومة المعلوماتية الصحية (Health Informatics Diploma)</div>
-              <div class="item-sub">أكاديمية السادات للعلوم الإدارية</div>
-            </li>
-            <li>
-              <div class="item-title">بكالوريوس الإدارة الصحية وتكنولوجيا معلومات الإدارة</div>
-              <div class="item-sub">Health Administration & Management IT</div>
-            </li>
-          </ul>
+      <div class="timeline-container">
+        
+        <!-- المؤهل 1 -->
+        <div class="timeline-node">
+          <div class="node-marker"><i class="fas fa-graduation-cap"></i></div>
+          <div class="node-content">
+            <div class="node-header">
+              <h3>ماجستير هندسة البرمجيات (Software Engineering MSc)</h3>
+              <span class="node-badge current">مستمر</span>
+            </div>
+            <div class="node-place">جامعة القاهرة — كلية الحاسبات والذكاء الاصطناعي</div>
+            <p class="node-details">التركيز على نمذجة النظم المعقدة، معمارية البرمجيات المتقدمة، وضمان جودة الأنظمة وقابليتها للتوسع.</p>
+          </div>
         </div>
 
-        <!-- المنح والتدريب الاحترافي -->
-        <div class="card">
-          <h3 class="card-heading"><i class="fas fa-certificate text-muted"></i> المنح والمبادرات الوطنية</h3>
-          <ul class="clean-list">
-            <li>
-              <div class="item-title">منحة بناة مصر الرقمية (DEBI)</div>
-              <div class="item-sub">مسار الذكاء الاصطناعي التطبيقي (Applied AI)</div>
-            </li>
-            <li>
-              <div class="item-title">مبادرة رواد مصر الرقمية (DEPI)</div>
-              <div class="item-sub">مسار تخصص .NET وتطوير الأنظمة المتكاملة</div>
-            </li>
-            <li>
-              <div class="item-title">المعهد القومي للاتصالات (NTI)</div>
-              <div class="item-sub">تطوير تطبيقات الهواتف الذكية عبر Flutter & Dart</div>
-            </li>
-            <li>
-              <div class="item-title">برامج تخصصية دولية (Coursera)</div>
-              <div class="item-sub">حزم متعددة في بنية النظم البرمجية وهندسة الخوارزميات</div>
-            </li>
-          </ul>
+        <!-- المؤهل 2 -->
+        <div class="timeline-node">
+          <div class="node-marker"><i class="fas fa-laptop-code"></i></div>
+          <div class="node-content">
+            <div class="node-header">
+              <h3>بكالوريوس علوم الحاسوب (B.Sc. in Computer Science)</h3>
+              <span class="node-badge current">مستمر</span>
+            </div>
+            <div class="node-place">University of the People — الولايات المتحدة</div>
+            <p class="node-details">دراسة الخوارزميات، هياكل البيانات، أنظمة التشغيل، وتصميم قواعد البيانات ونظم الشبكات.</p>
+          </div>
         </div>
+
+        <!-- المؤهل 3 (المعلوماتية الصحية) -->
+        <div class="timeline-node">
+          <div class="node-marker highlight-marker"><i class="fas fa-heart-pulse"></i></div>
+          <div class="node-content highlight-content">
+            <div class="node-header">
+              <h3>دبلومة المعلوماتية الصحية (Health Informatics Diploma)</h3>
+              <span class="node-badge">أكاديمية السادات للعلوم الإدارية</span>
+            </div>
+            <div class="node-place">تخصص نوعي يربط بين الأنظمة الطبية وتحليل وتدفق البيانات الصحية</div>
+            <p class="node-details">فهم النظم الإدارية للمستشفيات، المعايير الطبية للبيانات، وتكامل السجلات الطبية مع الحلول الرقمية.</p>
+          </div>
+        </div>
+
+        <!-- المؤهل 4 -->
+        <div class="timeline-node">
+          <div class="node-marker"><i class="fas fa-briefcase-medical"></i></div>
+          <div class="node-content">
+            <div class="node-header">
+              <h3>بكالوريوس الإدارة الصحية وتكنولوجيا معلومات الإدارة</h3>
+              <span class="node-badge">بكالوريوس</span>
+            </div>
+            <div class="node-place">Health Administration & Management Information Technology</div>
+            <p class="node-details">إدارة المؤسسات الصحية، تحليل وتصميم نظم المعلومات الإدارية، وإدارة دورات العمل والأداء.</p>
+          </div>
+        </div>
+
+        <!-- المؤهل 5 (المنح والمبادرات) -->
+        <div class="timeline-node">
+          <div class="node-marker"><i class="fas fa-award"></i></div>
+          <div class="node-content">
+            <div class="node-header">
+              <h3>المبادرات والمنح الحكومية المتقدمة</h3>
+              <span class="node-badge success">شهادات مهنية</span>
+            </div>
+            <div class="node-place">وزارة الاتصالات وتكنولوجيا المعلومات والمراكز التابعة</div>
+            <ul class="sub-points">
+              <li><strong>مبادرة بناة مصر الرقمية:</strong> تدريب متخصص ومكثف في الذكاء الاصطناعي التطبيقي (Applied AI).</li>
+              <li><strong>مبادرة رواد مصر الرقمية (DEPI):</strong> مسار مكثف لتطوير أنظمة الويب وحلول المؤسسات بتقنيات .NET Core.</li>
+              <li><strong>المعهد القومي للاتصالات (NTI):</strong> دبلومة تطوير تطبيقات الموبايل Cross-Platform عبر Flutter و Dart.</li>
+              <li><strong>كورسيرا (Coursera):</strong> شهادات تخصصية في معمارية البرمجيات والخوارزميات وتصميم البرمجيات النظيفة.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- المهارات التقنية -->
+  <!-- Skills (تصنيف وظيفي وليس مجرد قائمة تاغات) -->
   <section id="skills" class="section">
     <div class="container">
-      <div class="section-header">
-        <h2>القدرات والمهارات التقنية</h2>
-        <p>الأدوات والتقنيات التي أعتمد عليها في بناء بنية تحتية برمجية موثوقة</p>
+      <div class="section-title-wrap">
+        <span class="section-tag">الحقيبة التقنية</span>
+        <h2>الكفاءات والأدوات الهندسية</h2>
       </div>
 
-      <div class="grid-3">
-        <div class="card">
-          <h4>Backend & Systems</h4>
-          <div class="tags-group">
-            <span class="tag">C#</span>
-            <span class="tag">.NET Core</span>
-            <span class="tag">ASP.NET Web API</span>
-            <span class="tag">Entity Framework</span>
-            <span class="tag">SQL Server</span>
-            <span class="tag">Clean Architecture</span>
-            <span class="tag">OOP & SOLID</span>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fab fa-microsoft icon-tech"></i>
+            <h3>.NET & Core Backend</h3>
+          </div>
+          <div class="tech-pills">
+            <span>C#</span>
+            <span>ASP.NET Core</span>
+            <span>Web API</span>
+            <span>Entity Framework Core</span>
+            <span>LINQ</span>
+            <span>SQL Server</span>
+            <span>Clean Architecture</span>
+            <span>Repository Pattern</span>
+            <span>JWT & Identity</span>
           </div>
         </div>
 
-        <div class="card">
-          <h4>Cloud & Automation</h4>
-          <div class="tags-group">
-            <span class="tag">Google Apps Script</span>
-            <span class="tag">Sheets & Forms API</span>
-            <span class="tag">Docs & Gmail Automation</span>
-            <span class="tag">RESTful APIs Integration</span>
-            <span class="tag">Applied AI Basics</span>
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fab fa-google icon-tech"></i>
+            <h3>Google Cloud & Apps Script</h3>
+          </div>
+          <div class="tech-pills">
+            <span>Google Apps Script</span>
+            <span>Sheets as Database</span>
+            <span>Forms Integration</span>
+            <span>Gmail API</span>
+            <span>Docs Automated PDF</span>
+            <span>Triggers & Automation</span>
+            <span>External REST APIs</span>
           </div>
         </div>
 
-        <div class="card">
-          <h4>Mobile & Tools</h4>
-          <div class="tags-group">
-            <span class="tag">Flutter</span>
-            <span class="tag">Dart</span>
-            <span class="tag">Git & GitHub</span>
-            <span class="tag">Postman</span>
-            <span class="tag">Database Design</span>
+        <div class="skill-card">
+          <div class="skill-head">
+            <i class="fas fa-mobile-screen-button icon-tech"></i>
+            <h3>Mobile & Intelligence</h3>
+          </div>
+          <div class="tech-pills">
+            <span>Flutter</span>
+            <span>Dart</span>
+            <span>State Management</span>
+            <span>Applied AI Concepts</span>
+            <span>Git / GitHub CI/CD</span>
+            <span>Postman & Swagger</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- المشاريع البرمجية -->
-  <section id="projects" class="section bg-subtle">
+  <!-- Featured Projects (بطاقات مهيكلة وليست فقرة نصية) -->
+  <section id="projects" class="section bg-card">
     <div class="container">
-      <div class="section-header">
-        <h2>أبرز المشاريع الهندسية</h2>
-        <p>نماذج لحلول برمجية تم تصميمها وتنفيذها وفق متطلبات واقعية</p>
+      <div class="section-title-wrap">
+        <span class="section-tag">معرض الأعمال</span>
+        <h2>أبرز المشاريع والحلول التطبيقية</h2>
       </div>
 
-      <div class="grid-2">
+      <div class="projects-grid">
+
         <!-- 1. مشروع الفندق -->
-        <div class="project-box">
-          <div class="project-meta">مشروع تخرج | رواد مصر الرقمية</div>
-          <h3>نظام إدارة الفنادق المؤسسي (Hotel Management System)</h3>
-          <p>نظام باك إند وقواعد بيانات متكامل لإدارة العمليات التشغيلية الفندقية (الحجوزات، تسكين النزلاء، الفواتير والحسابات، وإدارة الغرف) تم بناؤه بالاعتماد على معمارية الطبقات ونمط Repository.</p>
-          <div class="project-tags">
+        <div class="project-card">
+          <div class="project-header">
+            <div class="proj-badge">مشروع تخرج | رواد مصر الرقمية</div>
+            <h3 class="proj-title">نظام إدارة العمليات الفندقية (Hotel ERP System)</h3>
+          </div>
+          
+          <div class="spec-block">
+            <span class="spec-label">الوصف والحل:</span>
+            <p>نظام متكامل لمعالجة الحجوزات، تسكين النزلاء، وإدارة الغرف مع حساب الضرائب والفواتير وحالات الإشغال بشكل مؤتمت بالكامل.</p>
+          </div>
+
+          <div class="spec-block">
+            <span class="spec-label">القرار المعماري:</span>
+            <p>مبني باتباع معمارية الطبقات المنفصلة (Clean Architecture) مع فصل مجالات العمل (Domain) واستخدام Generic Repository Pattern لسهولة الاختبار وتطوير قواعد البيانات.</p>
+          </div>
+
+          <div class="tech-badges">
             <span>C#</span>
             <span>ASP.NET Core</span>
             <span>EF Core</span>
-            <span>MS SQL Server</span>
-          </div>
-          <div class="project-actions">
-            <a href="#" class="text-link"><i class="fab fa-github"></i> مستودع المشروع</a>
-          </div>
-        </div>
-
-        <!-- 2. تقييم الموظفين -->
-        <div class="project-box">
-          <div class="project-meta">Enterprise Application</div>
-          <h3>منظومة تقييم ومتابعة أداء الموظفين (KPIs Evaluation)</h3>
-          <p>نظام لإدارة الأهداف السنوية والفصلية وتقييم كفاءة الكوادر الوظيفية، يدعم الصلاحيات متعددة المستويات وتوليد تقارير الأداء للمؤسسات والشركات.</p>
-          <div class="project-tags">
-            <span>.NET Core Web API</span>
             <span>SQL Server</span>
-            <span>Clean Code</span>
           </div>
-          <div class="project-actions">
-            <a href="#" class="text-link"><i class="fab fa-github"></i> مستودع المشروع</a>
+
+          <div class="proj-footer">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> الكود على GitHub</a>
           </div>
         </div>
 
-        <!-- 3. حلقات القرآن -->
-        <div class="project-box">
-          <div class="project-meta">Cloud Automation Platform</div>
-          <h3>نظام إدارة حلقات تحفيظ القرآن والتقييم الدوري</h3>
-          <p>حل أتمتة شامل يربط بين Google Sheets وForms لجدولة الحلقات، تسجيل الحضور، رصد درجات ومعدلات تقدم الحفظ، مع توليد تقارير PDF تلقائية للمعلمين وأولياء الأمور وإرسالها بريدياً.</p>
-          <div class="project-tags">
+        <!-- 2. تقييم أداء الموظفين -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="proj-badge">Enterprise Backend</div>
+            <h3 class="proj-title">نظام تقييم كفاءة ومؤشرات أداء الموظفين (KPIs)</h3>
+          </div>
+          
+          <div class="spec-block">
+            <span class="spec-label">الوصف والحل:</span>
+            <p>منصة مؤسسية لتحديد ومتابعة مؤشرات الأداء الدورية للأفراد والأقسام، مع نظام موافقات متعدد الصلاحيات ولوحات متابعة تقييمية لإدارة الموارد البشرية.</p>
+          </div>
+
+          <div class="spec-block">
+            <span class="spec-label">القرار المعماري:</span>
+            <p>تصميم RESTful APIs مؤمّنة بالكامل تعتمد على Role-Based Authorization، وقواعد بيانات علائقية محكمة التنسيق لضمان سرعة إخراج تقارير التقييم.</p>
+          </div>
+
+          <div class="tech-badges">
+            <span>ASP.NET Core Web API</span>
+            <span>SQL Server</span>
+            <span>Data Modeling</span>
+          </div>
+
+          <div class="proj-footer">
+            <a href="#" class="proj-link"><i class="fab fa-github"></i> الكود على GitHub</a>
+          </div>
+        </div>
+
+        <!-- 3. مشروع حلقات القرآن -->
+        <div class="project-card">
+          <div class="project-header">
+            <div class="proj-badge">Automation & Education</div>
+            <h3 class="proj-title">منصة أتمتة وإدارة حلقات تحفيظ القرآن الكريم</h3>
+          </div>
+          
+          <div class="spec-block">
+            <span class="spec-label">الوصف والحل:</span>
+            <p>نظام سحابي خفيف وبدون تكلفة استضافة (Serverless) يدير مواعيد الحلقات، متابعة الحفظ، رصد تقييمات الطلاب، وتوليد تقارير أداء PDF فورية للمعلمين وأولياء الأمور وإرسالها بريدياً.</p>
+          </div>
+
+          <div class="spec-block">
+            <span class="spec-label">القرار المعماري:</span>
+            <p>استغلال Google Apps Script كمحرك منطقي (Logic Layer) مربوط بـ Google Sheets كقاعدة بيانات، مع استدعاء نماذج Docs لإنتاج الشهادات وإرسالها عبر Gmail Triggers.</p>
+          </div>
+
+          <div class="tech-badges">
             <span>Google Apps Script</span>
             <span>Workspace APIs</span>
-            <span>Automated Reports</span>
+            <span>Automated Mailing</span>
           </div>
-          <div class="project-actions">
-            <a href="#" class="text-link"><i class="fas fa-external-link-alt"></i> استعراض النظام</a>
+
+          <div class="proj-footer">
+            <a href="#" class="proj-link"><i class="fas fa-play-circle"></i> استعراض النظام</a>
           </div>
         </div>
 
         <!-- 4. مواعيد التدريب -->
-        <div class="project-box">
-          <div class="project-meta">Integration Solution</div>
-          <h3>نظام أتمتة وجدولة برامج التدريب التفاعلية</h3>
-          <p>معالجة تلقائية لطلبات التسجيل وإدارة مواعيد المحاضرات وورش العمل وتوزيع روابط الانضمام والشهادات آلياً، مما اختصر أكثر من 80% من العمل الإداري اليدوي.</p>
-          <div class="project-tags">
+        <div class="project-card">
+          <div class="project-header">
+            <div class="proj-badge">Workflow Automation</div>
+            <h3 class="proj-title">منظومة حجز وجدولة المواعيد والورش التدريبية</h3>
+          </div>
+          
+          <div class="spec-block">
+            <span class="spec-label">الوصف والحل:</span>
+            <p>أتمتة ذكية لرحلة التسجيل في الدورات، تبدأ من استقبال الطلبات وفرزها آلياً، واكتشاف التعارض في المواعيد، وحتى إصدار بطاقات الحضور وتحديث الجداول لحظياً.</p>
+          </div>
+
+          <div class="spec-block">
+            <span class="spec-label">القرار المعماري:</span>
+            <p>ربط آمن عبر Webhooks بين استمارات الاستقبال، وجداول البيانات، مع معالجة البيانات غير المتزامنة لضمان عدم حدوث تصادم في المواعيد المحجوزة.</p>
+          </div>
+
+          <div class="tech-badges">
             <span>Apps Script</span>
             <span>Calendar API</span>
-            <span>Gmail Integration</span>
+            <span>Sheets API</span>
           </div>
-          <div class="project-actions">
-            <a href="#" class="text-link"><i class="fas fa-external-link-alt"></i> استعراض الحل</a>
+
+          <div class="proj-footer">
+            <a href="#" class="proj-link"><i class="fas fa-play-circle"></i> استعراض النظام</a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- قسم التواصل -->
+  <!-- Contact Form -->
   <section id="contact" class="section">
-    <div class="container contact-container">
-      <div class="section-header">
-        <h2>بدء محادثة عمل</h2>
-        <p>إذا كنت تبحث عن مهندس برمجيات لمشروع مؤسسي، استشارة برمجية، أو فرصة عمل، يُسعدني تواصلك.</p>
+    <div class="container contact-wrapper">
+      <div class="section-title-wrap text-center">
+        <span class="section-tag">التواصل المهني</span>
+        <h2>لنبدأ بالحديث عن مشروعك القادم</h2>
+        <p class="contact-lead">سواء كنت تبحث عن مطور لأنظمة .NET، حلول لأتمتة بيانات مؤسستك، أو استشارة برمجية في النظم الصحية، أنا جاهز.</p>
       </div>
 
-      <form class="simple-form" id="contact-form">
-        <div class="form-row">
-          <input type="text" id="sender-name" placeholder="الاسم" required />
-          <input type="email" id="sender-email" placeholder="البريد الإلكتروني" required />
+      <form class="clean-form" id="contact-form">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">الاسم الكريم</label>
+            <input type="text" id="name" placeholder="مثال: م. أحمد" required />
+          </div>
+          <div class="field">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" placeholder="example@domain.com" required />
+          </div>
         </div>
-        <input type="text" id="subject" placeholder="عنوان الرسالة" required />
-        <textarea id="message" rows="5" placeholder="تفاصيل رسالتك أو متطلبات المشروع..." required></textarea>
-        <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+        <div class="field">
+          <label for="subject">موضوع التواصل</label>
+          <input type="text" id="subject" placeholder="فرصة عمل / استشارة / مشروع جديد" required />
+        </div>
+        <div class="field">
+          <label for="msg">تفاصيل الرسالة</label>
+          <textarea id="msg" rows="5" placeholder="اكتب نبذة عن المتطلبات أو الاستفسار..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn"><i class="fas fa-paper-plane"></i> إرسال الرسالة</button>
       </form>
     </div>
   </section>
 
-  <!-- التذييل -->
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-flex">
-      <div>© <span id="year"></span> مهندس برمجيات. بنيت وفق معايير الويب النظيفة.</div>
-      <div class="footer-links">
-        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> البريد الإلكتروني</a>
+    <div class="container footer-row">
+      <div class="footer-copy">
+        © <span id="year"></span> مهندس برمجيات | تم البناء بأعلى معايير الويب وهندسة الواجهات.
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </footer>
