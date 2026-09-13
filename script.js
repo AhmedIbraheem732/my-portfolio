@@ -1,50 +1,50 @@
-// 1. تحديث السنة تلقائياً
+// 1. تحديث سنة حقوق الملكية تلقائياً
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// 2. إدارة المظهر الداكن/الفاتح (Default is clean dark)
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = themeToggle.querySelector('i');
-const savedTheme = localStorage.getItem('app-theme') || 'dark';
+// 2. إدارة الوضع الليلي/الفاتح بدقة هندسية وحفظ الاختيار
+const themeBtn = document.getElementById('theme-btn');
+const themeIcon = themeBtn.querySelector('i');
+const savedTheme = localStorage.getItem('user-theme') || 'dark';
 
 if (savedTheme === 'light') {
   document.documentElement.setAttribute('data-theme', 'light');
   themeIcon.classList.replace('fa-moon', 'fa-sun');
 } else {
-  document.documentElement.setAttribute('data-theme', 'dark');
+  document.documentElement.removeAttribute('data-theme');
 }
 
-themeToggle.addEventListener('click', () => {
+themeBtn.addEventListener('click', () => {
   const isLight = document.documentElement.getAttribute('data-theme') === 'light';
   if (isLight) {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.removeAttribute('data-theme');
     themeIcon.classList.replace('fa-sun', 'fa-moon');
-    localStorage.setItem('app-theme', 'dark');
+    localStorage.setItem('user-theme', 'dark');
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
     themeIcon.classList.replace('fa-moon', 'fa-sun');
-    localStorage.setItem('app-theme', 'light');
+    localStorage.setItem('user-theme', 'light');
   }
 });
 
-// 3. القائمة في شاشات الموبايل
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+// 3. التحكم في القائمة المنسدلة لشاشات الهواتف
+const menuBtn = document.getElementById('menu-btn');
+const navMenu = document.getElementById('nav-menu');
 
-menuToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
+menuBtn.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
 });
 
-navLinks.querySelectorAll('a').forEach(link => {
+// إغلاق القائمة فور الضغط على أي عنصر داخلها
+navMenu.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
+    navMenu.classList.remove('active');
   });
 });
 
-// 4. نموذج التواصل
-// يمكنك لاحقاً ربطه بـ Webhook لـ Google Apps Script الذي تبرمجه بنفسك ليصلك على Gmail
+// 4. معالجة إرسال النموذج بشكل نظيف
 document.getElementById('contact-form').addEventListener('submit', (e) => {
   e.preventDefault();
-  const name = document.getElementById('sender-name').value;
-  alert(`شكراً لك يا ${name}. تم استلام رسالتك وسأتواصل معك قريباً.`);
+  const senderName = document.getElementById('name').value;
+  alert(`أهلاً بك يا ${senderName}، تم استلام رسالتك بنجاح وسأرد عليك في أقرب وقت.`);
   e.target.reset();
 });
