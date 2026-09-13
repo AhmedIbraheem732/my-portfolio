@@ -1,50 +1,133 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المحفظة الشخصية</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Software Engineer Portfolio" />
+  <title>مهندس برمجيات | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- FontAwesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    <header>
-        <h1>مرحباً بك في موقعي الشخصي</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">عني</a></li>
-                <li><a href="#projects">مشاريعي</a></li>
-                <li><a href="#contact">تواصل معي</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- شريط التنقل العلوي -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#home" class="logo">&lt;Dev/&gt;</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">عنّي</a></li>
+        <li><a href="#skills">المهارات</a></li>
+        <li><a href="#projects">المشاريع</a></li>
+        <li><a href="#contact">تواصل معي</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" aria-label="تبديل المظهر"><i class="fas fa-moon"></i></button>
+        <button id="menu-toggle" class="mobile-btn" aria-label="القائمة"><i class="fas fa-bars"></i></button>
+      </div>
+    </nav>
+  </header>
 
-    <main>
-        <section id="about">
-            <h2>نبذة عني</h2>
-            <!-- تم إضافة النص البديل alt لإمكانية الوصول -->
-            <img src="https://via.placeholder.com/150" alt="صورة شخصية لصاحب المحفظة">
-            <p>أنا مطور ويب مبتدئ وأعمل على تطوير مهاراتي في HTML وCSS وJavaScript.</p>
-        </section>
+  <!-- الواجهة الترحيبية -->
+  <section id="home" class="hero container">
+    <div class="hero-content">
+      <span class="badge">مرحباً بك في مساحتي الرقمية 👋</span>
+      <h1>أنا <span class="highlight">مهندس برمجيات</span></h1>
+      <p>أقوم بتحويل الأفكار المعقدة إلى أنظمة وتطبيقات ويب قوية، قابلة للتوسع، وعالية الأداء.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">استعرض أعمالي</a>
+        <a href="#contact" class="btn btn-secondary">تواصل معي</a>
+      </div>
+    </div>
+  </section>
 
-        <section id="projects">
-            <h2>مشاريعي</h2>
-            <article class="project-card">
-                <h3>مشروع تطوير الويب</h3>
-                <p>موقع ويب بسيط تم بناؤه باستخدام التقنيات الأساسية.</p>
-            </article>
-        </section>
+  <!-- نبذة عني -->
+  <section id="about" class="about container section">
+    <h2 class="section-title">نبذة عني</h2>
+    <div class="about-card">
+      <p>مهندس برمجيات شغوف بهندسة النظم، كتابة الكود النظيف والمستدام (Clean Code)، وتطبيق مبادئ هندسة البرمجيات كـ Clean Architecture وCI/CD وتصميم قواعد البيانات وحلول الويب عالية السرعة والأمان.</p>
+    </div>
+  </section>
 
-        <section id="contact">
-            <h2>تواصل معي</h2>
-            <button id="contactBtn">اضغط للتواصل</button>
-            <p id="message"></p>
-        </section>
-    </main>
+  <!-- المهارات التقنية -->
+  <section id="skills" class="skills container section">
+    <h2 class="section-title">المهارات والتقنيات</h2>
+    <div class="skills-grid">
+      <span class="skill-tag"><i class="fab fa-js"></i> JavaScript / TypeScript</span>
+      <span class="skill-tag"><i class="fab fa-node"></i> Node.js</span>
+      <span class="skill-tag"><i class="fab fa-react"></i> React / Next.js</span>
+      <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+      <span class="skill-tag"><i class="fab fa-docker"></i> Docker & Git</span>
+      <span class="skill-tag"><i class="fas fa-database"></i> SQL / PostgreSQL</span>
+      <span class="skill-tag"><i class="fas fa-server"></i> RESTful APIs & GraphQL</span>
+      <span class="skill-tag"><i class="fas fa-shield-alt"></i> Clean Architecture</span>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2026 جميع الحقوق محفوظة</p>
-    </footer>
+  <!-- المشاريع -->
+  <section id="projects" class="projects container section">
+    <h2 class="section-title">أبرز المشاريع</h2>
+    <div class="projects-grid">
+      
+      <article class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open folder-icon"></i>
+          <div class="project-links">
+            <a href="https://github.com" target="_blank" title="GitHub Repo"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" title="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <h3>منصة تجارة إلكترونية متكاملة</h3>
+        <p>نظام مبني ببنية الميكروسيرفسز، يدعم بوابات الدفع الإلكتروني، وتتبع الطلبات المباشر مع لوحة تحكم إدارية متقدمة.</p>
+        <ul class="project-tags">
+          <li>React</li>
+          <li>Node.js</li>
+          <li>MongoDB</li>
+        </ul>
+      </article>
 
-    <script src="script.js"></script>
+      <article class="project-card">
+        <div class="project-header">
+          <i class="fas fa-folder-open folder-icon"></i>
+          <div class="project-links">
+            <a href="https://github.com" target="_blank" title="GitHub Repo"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" title="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+        <h3>محرك تحليل ومعالجة البيانات</h3>
+        <p>تطبيق ويب لمعالجة ملفات البيانات الضخمة، واستخراج تقارير تفاعلية وتنبؤية بدقة وسرعة فائقة.</p>
+        <ul class="project-tags">
+          <li>Python</li>
+          <li>FastAPI</li>
+          <li>PostgreSQL</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- نموذج التواصل -->
+  <section id="contact" class="contact container section">
+    <h2 class="section-title">تواصل معي</h2>
+    <form class="contact-form" id="contact-form">
+      <input type="text" placeholder="الاسم الكامل" required />
+      <input type="email" placeholder="البريد الإلكتروني" required />
+      <textarea placeholder="رسالتك..." rows="5" required></textarea>
+      <button type="submit" class="btn btn-primary">إرسال الرسالة</button>
+    </form>
+  </section>
+
+  <!-- التذييل -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> جميع الحقوق محفوظة.</p>
+      <div class="social-icons">
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:engineer@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
